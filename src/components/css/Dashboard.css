@@ -1,0 +1,153 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Light background */
+  color: #333;
+  box-sizing: border-box; /* Ensure padding and borders don't affect element sizes */
+  height: 100%; /* Fullscreen height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Occupies the full viewport height */
+  width: 100%; /* Occupies the full viewport width */
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* Header Component */
+.dashboard-container header {
+  background-color: #073107; /* Dark green for header */
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow to the header */
+  position: sticky; /* Sticks header to the top during scroll */
+  top: 0;
+  z-index: 1000; /* Ensure header stays on top */
+}
+
+/* Layout */
+.dashboard-layout {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Prevents content overflow */
+}
+
+/* Sidebar Navigation */
+.dashboard-sidebar {
+  width: 250px;
+  background-color: #073107; /* Primary green */
+  color: #ededed;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  height: 100%;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Add shadow for sidebar */
+}
+
+.dashboard-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-menu-item {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 20px;
+  margin: 10px 0;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  background-color: #073107;
+}
+
+.dashboard-menu-item:hover {
+  background-color: #000000; /* Darker green on hover */
+  transform: translateX(5px); /* Subtle move effect */
+}
+
+.dashboard-menu-item.active {
+  background-color: #032103; /* Highlight active item with a lighter green */
+}
+
+.dashboard-menu-icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Main Content */
+.dashboard-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff; /* White background for content */
+  overflow-y: auto; /* Enable scrolling for content */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-page {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  color: #073107; /* Primary green for text */
+}
+
+/* Scrollbar customization (optional) */
+.dashboard-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dashboard-content::-webkit-scrollbar-thumb {
+  background-color: #073107;
+  border-radius: 4px;
+}
+
+.dashboard-content::-webkit-scrollbar-thumb:hover {
+  background-color: #2a7a2a;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .dashboard-layout {
+    flex-direction: column; /* Stack sidebar and content vertically */
+  }
+
+  .dashboard-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative; /* Sidebar stacks above content */
+  }
+
+  .dashboard-content {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-menu-item {
+    font-size: 16px; /* Smaller font for sidebar items */
+    padding: 10px 15px;
+  }
+
+  .dashboard-menu-icon {
+    font-size: 18px;
+  }
+
+  .dashboard-page {
+    font-size: 20px; /* Adjusted heading size */
+    margin-top: 30px;
+  }
+}

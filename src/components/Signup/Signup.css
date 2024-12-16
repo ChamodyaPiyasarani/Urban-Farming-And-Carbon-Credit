@@ -1,0 +1,83 @@
+/* General styles */
+.signupContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+.categorySelection {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.7); /* Dark background with opacity */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px); /* Black blur effect */
+  color: white;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.headingWrapper {
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: white;
+  font-size: 2rem;
+}
+
+.buttonWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ensures buttons are centered */
+  gap: 15px; /* Spacing between buttons */
+}
+
+.buttonContainer {
+  width: 100%; /* Makes each button span the full width of its container */
+}
+
+.categoryButton {
+  background-color: #1f4529; /* Dark Green */
+  color: #e8ecd7; /* Light Beige */
+  padding: 12px 20px;
+  border: none;
+  width: 100%; /* Ensures all buttons are the same size */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Ensures text and icon are centered */
+}
+
+.categoryButton:hover {
+  background-color: #064420; /* Darker green on hover */
+}
+
+.categoryButton i {
+  margin-right: 10px; /* Space between the icon and text */
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .categorySelection {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .categoryButton {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+}

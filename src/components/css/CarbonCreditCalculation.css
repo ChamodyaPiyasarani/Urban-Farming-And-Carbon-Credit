@@ -1,0 +1,175 @@
+/* Container for the entire page */
+.carbon-credit-container {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1b4332;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Introduction Text */
+.intro-text {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Calculation Steps Section */
+.calculation-steps {
+  margin-top: 30px;
+}
+
+/* Subheading for the steps */
+.sub-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1b4332;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Styling for each step */
+.step {
+  margin-bottom: 25px;
+  padding: 25px;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.step-title {
+  font-size: 1.4rem;
+  color: #081c15;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.step p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+/* Formula Styling */
+.formula {
+  background-color: #edf2f4;
+  padding: 15px;
+  font-size: 1.1rem;
+  color: #2d6a4f;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 15px;
+  font-family: 'Courier New', monospace;
+  border-left: 4px solid #2d6a4f;
+}
+
+/* Button Styling */
+.calculate-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #1b4332;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.calculate-button:hover {
+  background-color: #2d6a4f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Result Display */
+.calculation-result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #081c15;
+  text-align: center;
+}
+
+/* Footer Styling */
+.footer {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1rem;
+  color: #333;
+  padding: 20px 0;
+  background-color: #f4f4f9;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer a {
+  color: #1b4332;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .sub-title {
+    font-size: 1.4rem;
+  }
+
+  .step-title {
+    font-size: 1.2rem;
+  }
+
+  .step {
+    padding: 15px;
+  }
+
+  .formula {
+    font-size: 1rem;
+  }
+
+  .calculate-button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .calculation-result {
+    font-size: 1rem;
+  }
+}

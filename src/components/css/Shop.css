@@ -1,0 +1,115 @@
+/* General Styling */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5; /* Light background for contrast */
+  color: #333; /* Dark text */
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.product-card {
+  background-color: #ffffff; /* White background for product cards */
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 280px;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background-color: #e0e0e0; /* Light grey placeholder */
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333; /* Dark text */
+}
+
+.product-card p {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #666; /* Grey for price */
+  font-weight: bold;
+}
+
+/* Price Tag Styling */
+.product-card .price {
+  color: #444;
+}
+
+.product-card .product-rating {
+  margin: 10px 0;
+  color: #ffcc00; /* Golden stars for rating */
+}
+
+/* Favorite Heart */
+.favorite {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  color: #ff6347; /* Tomato red for the favorite heart */
+}
+
+/* Button Styling */
+.add-cart-btn {
+  background-color: #2e8b57; /* Dark green button */
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: background-color 0.3s;
+}
+
+.add-cart-btn:hover {
+  background-color: #20633f; /* Slightly darker green */
+}
+
+.show-more-btn {
+  background-color: #2e8b57; /* Dark green button */
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  margin: 20px auto;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.show-more-btn:hover {
+  background-color: #20633f; /* Slightly darker green */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 90%; /* Full width for smaller screens */
+  }
+}

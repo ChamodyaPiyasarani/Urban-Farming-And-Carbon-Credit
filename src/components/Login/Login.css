@@ -1,0 +1,191 @@
+/* Global Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-image: url('https://papers.co/wallpaper/papers.co-nz14-leaf-summer-dark-tree-nature-29-wallpaper.jpg'); /* Replace with your background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Fixes the background while scrolling */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  color: #fff;
+}
+
+/* Login Container */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content inside container */
+  align-items: center;
+  max-width: 450px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.7); /* Dark background with opacity */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px); /* Blur effect on the background */
+  color: white;
+  text-align: center;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.login-container:hover {
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Heading */
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* Form Styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.login-form input {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.login-form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.login-form input:focus {
+  border-color: #064420;
+  outline: none;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.login-form input:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Password Toggle Icon */
+.password-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.password-container input {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.password-container .eye-icon {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+}
+
+/* Submit Button */
+.login-form button {
+  padding: 15px;
+  background-color: #064420;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.login-form button:hover {
+  background-color: #056635;
+  transform: translateY(-3px);
+}
+
+.login-form button:active {
+  transform: translateY(1px);
+}
+
+/* Sign Up Link Styling */
+.signup-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.signup-link p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.signup-link span {
+  color: #E4EFE7;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.signup-link span:hover {
+  color: #218838;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 25px;
+    margin: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .login-form button {
+    font-size: 16px;
+  }
+
+  .login-form input {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .login-form button {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .login-form input {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .signup-link p {
+    font-size: 14px;
+  }
+}

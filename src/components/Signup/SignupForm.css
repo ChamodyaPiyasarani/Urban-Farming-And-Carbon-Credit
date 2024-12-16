@@ -1,0 +1,188 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  
+  font-family: 'Arial', sans-serif;
+  background-color: #000; /* Fallback color for dark background */
+  background-size: cover;
+  background-position: center;
+  color: #fff; /* Ensures text is readable */
+}
+
+/* Form Container */
+.form-container {
+  max-width: 650px;
+  margin: 40px auto; /* Centers the container */
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px); /* Adds a blur effect to the background */
+  color: white;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Heading Styling */
+h2 {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input, Select, Textarea Styling */
+input,
+select,
+textarea {
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for inputs */
+  border: 2px solid #064420; /* Dark green border */
+  border-radius: 12px;
+  color: #064420; /* Dark green text */
+  padding: 12px 18px;
+  margin: 10px 0;
+  width: 100%;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #036b34; /* Lighter green for focus */
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Address Section Layout */
+.address-fields {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Creates 4 equal-width columns */
+  gap: 10px; /* Space between the fields */
+  width: 100%;
+}
+
+.address-fields input,
+.address-fields select {
+  width: 100%; /* Ensures inputs fill the entire column width */
+}
+
+textarea {
+  resize: vertical; /* Allows resizing the textarea vertically */
+  min-height: 120px;
+}
+
+/* Button Styles */
+button {
+  background-color: #064420; /* Dark green background */
+  color: white;
+  font-size: 1.2rem;
+  padding: 16px 30px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #036b34; /* Lighter green on hover */
+  transform: translateY(-2px);
+}
+
+button:focus {
+  outline: none;
+  background-color: #036b34;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .form-container {
+    max-width: 85%;
+    padding: 30px 20px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 1.1rem;
+  }
+
+  button {
+    font-size: 1.1rem;
+    padding: 14px 25px;
+  }
+
+  .address-fields {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 1rem;
+    padding: 10px 12px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  .address-fields {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .address-fields {
+    grid-template-columns: 1fr; /* Single column on mobile devices */
+  }
+}
